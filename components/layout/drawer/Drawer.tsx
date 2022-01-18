@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, useTheme, Theme, CSSObject } from "@mui/material/styles";
+import { styled, Theme, CSSObject } from "@mui/material/styles";
 import MuiDrawer from "@mui/material/Drawer";
 import {
   Divider,
@@ -7,6 +7,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from "@mui/material";
 
 import InboxIcon from "@mui/icons-material/Inbox";
@@ -65,20 +66,11 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
     <StyledDrawer variant="permanent" open={open}>
       <DrawerHeader open={open} setOpen={setOpen} />
       <Divider />
+      <Typography>Menù</Typography>
+      <Divider />
       <List>
         {menu.map((item: any, index: any) => (
           <DrawerItem {...item} key={index} />
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
         ))}
       </List>
     </StyledDrawer>
