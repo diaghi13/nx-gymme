@@ -20,9 +20,9 @@ export default function AppLayout({ children }: AppLayoutProps) {
       <CssBaseline />
       <AppBar open={open} setOpen={setOpen} />
       <Drawer open={open} setOpen={setOpen} />
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box component="main" sx={{ flexGrow: 1 }}>
         <DrawerHeader />
-        {children}
+        <Box sx={{ p: 3 }}>{children}</Box>
       </Box>
     </Box>
   );

@@ -17,7 +17,7 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <AppLayout>
+    <>
       <Grid container spacing={2}>
         <Grid item xs={8}>
           <Paper>Item 1</Paper>
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
         maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin
         aliquam ultrices sagittis orci a.
       </Typography>
-    </AppLayout>
+    </>
   );
 };
 
